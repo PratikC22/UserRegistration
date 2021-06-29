@@ -22,5 +22,9 @@ public class UserInputOutput {
         System.out.print("Enter your Mobile Number : ");
         String mNumber = sc.nextLine();
         System.out.println(user.mobileNumValidation(mNumber));
+        System.out.print("Enter your Password : ");
+        String password = sc.nextLine();
+        System.out.println(user.passwordValidation(password));
+
     }
 }
