@@ -19,5 +19,8 @@ public class UserInputOutput {
         System.out.print("Enter your email : ");
         String email = sc.nextLine();
         System.out.println(user.emailValidation(email));
+        System.out.print("Enter your Mobile Number : ");
+        String mNumber = sc.nextLine();
+        System.out.println(user.mobileNumValidation(mNumber));
     }
 }
