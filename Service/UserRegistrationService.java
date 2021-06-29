@@ -44,7 +44,7 @@ public class UserRegistrationService implements UserRegistrationInterface {
 
     @Override
     public boolean passwordValidation(String password) {
-        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+        String regex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,}$";
         Pattern p = Pattern.compile(regex);
         if (password == null) {
             return false;
