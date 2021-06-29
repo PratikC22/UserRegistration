@@ -13,5 +13,8 @@ public class UserInputOutput {
         System.out.println("Enter your first name :");
         String fname = sc.nextLine();
         System.out.println(user.usernameValidation(fname));
+        System.out.print("Enter your Last Name : ");
+        String lname = sc.nextLine();
+        System.out.println(user.usernameValidation(lname));
     }
 }
