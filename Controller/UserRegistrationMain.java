@@ -6,6 +6,7 @@
  ***********************************************************************/
 package Controller;
 
+import Service.UserRegistrationService;
 import Util.UserInputOutput;
 
 public class UserRegistrationMain {
@@ -14,5 +15,7 @@ public class UserRegistrationMain {
         System.out.println("Welcome to the user registration program");
         UserInputOutput userInputOutput = new UserInputOutput();
         userInputOutput.getMenu();
+        UserRegistrationService userRegistrationService = new UserRegistrationService();
+        userRegistrationService.emailSampleValidation();
     }
 }

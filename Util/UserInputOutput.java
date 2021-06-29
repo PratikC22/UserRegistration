@@ -2,6 +2,7 @@ package Util;
 
 import Service.UserRegistrationService;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UserInputOutput {
@@ -11,11 +12,11 @@ public class UserInputOutput {
 
     public void getMenu() {
         System.out.println("Enter your first name :");
-        String fname = sc.nextLine();
-        System.out.println(user.usernameValidation(fname));
+        String firstName = sc.nextLine();
+        System.out.println(user.usernameValidation(firstName));
         System.out.print("Enter your Last Name : ");
-        String lname = sc.nextLine();
-        System.out.println(user.usernameValidation(lname));
+        String lastName = sc.nextLine();
+        System.out.println(user.usernameValidation(lastName));
         System.out.print("Enter your email : ");
         String email = sc.nextLine();
         System.out.println(user.emailValidation(email));
@@ -25,6 +26,5 @@ public class UserInputOutput {
         System.out.print("Enter your Password : ");
         String password = sc.nextLine();
         System.out.println(user.passwordValidation(password));
-
     }
 }
