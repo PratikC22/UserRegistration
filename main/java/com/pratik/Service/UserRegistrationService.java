@@ -1,4 +1,4 @@
-package Service;
+package com.pratik.Service;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -54,43 +54,7 @@ public class UserRegistrationService implements UserRegistrationInterface {
         return m.matches();
     }
 
-    @Override
-    public void emailSampleValidation() {
-        ArrayList<String> emailList = new ArrayList<>();
-        System.out.println("\nValidating sample email :\n");
-        //Valid email
-        emailList.add("abc@yahoo.com");
-        emailList.add("abc-100@yahoo.com");
-        emailList.add("abc.100@yahoo.com");
-        emailList.add("abc111@abc.com");
-        emailList.add("abc-100@abc.net");
-        emailList.add("abc.100@abc.com.au");
-        emailList.add("abc@1.com");
-        emailList.add("abc@gmail.com.com");
-        emailList.add("abc+100@gmail.com");
-
-        //Invalid email
-        emailList.add("abc");
-        emailList.add("abc@.com.my");
-        emailList.add("abc123@gmail.a");
-        emailList.add("abc123@.com");
-        emailList.add("abc123@.com.com");
-        emailList.add(".abc@abc.com");
-        emailList.add("abc()*@gmail.com");
-        emailList.add("abc@%*.com");
-        emailList.add("abc..2002@gmail.com");
-        emailList.add("abc.@gmail.com");
-        emailList.add("abc@abc@gmail.com");
-        emailList.add("abc@gmail.com.1a");
-        emailList.add("abc@gmail.com.aa.au");
-
-
-        String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:([0-9-]{1}|[a-zA-Z]{3,5})\\.)+[a-zA-Z]{2,3}";
-        Pattern pattern = Pattern.compile(regex);
-
-        for (String email : emailList) {
-            Matcher matcher = pattern.matcher(email);
-            System.out.println(email + " : " + matcher.matches());
-        }
+    public boolean analyseHappySad(String message) {
+        return !message.contains("Sad");
     }
 }
