@@ -64,7 +64,7 @@ public class UserRegistrationTest {
     public void givenSadMessageReturnSad()
     {
         UserRegistrationInterface Analyser = new UserRegistrationService();
-        boolean mood = Analyser.analyseHappySad("Hello, I am Sad");
+        boolean mood = Analyser.analyseHappySad("Hello, I am sad");
         assertTrue(mood);
     }
     @Test
